@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/temperatureNow"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:textSize="48sp"
+        android:text="@string/temperature" />
+
+    <TextView
+        android:id="@+id/humidityNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/humidity"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@+id/humidity"
+        android:gravity="center"
+        android:text="@string/humidityNow"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/overcastNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/overcast"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@+id/overcast"
+        android:gravity="center"
+        android:text="@string/overcastNow"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/timeNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/time"
+        android:textSize="42sp" />
+
+    <TextView
+        android:id="@+id/dateNow"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_below="@+id/timeNow"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="@string/date"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/selectedCity"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_below="@+id/dateNow"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/humidity"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureNow"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/humidity" />
+
+    <CheckBox
+        android:id="@+id/overcast"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidity"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/overcast" />
+
+    <Button
+        android:id="@+id/aboutCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/overcast"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/about_city" />
+
+</RelativeLayout>

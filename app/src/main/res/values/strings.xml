@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="city">Moscow</string>
+    <string name="time">01:40</string>
+    <string name="date">13 / 08 / 2020</string>
+    <string name="temperature">14°C</string>
+    <string name="humidity">Humidity</string>
+    <string name="overcast">Overcast</string>
+    <string name="overcastNow">overcast</string>
+    <string name="humidityNow">90%</string>
+    <string name="show_weather">show weather</string>
+    <string name="about_city">About city</string>
+    <string name="wikipedia">https://wikipedia.org/wiki/</string>
+
+    <string-array name="cities">
+        <item>Moscow</item>
+        <item>Saint_Petersburg</item>
+        <item>Yakutsk</item>
+    </string-array>
+</resources>
