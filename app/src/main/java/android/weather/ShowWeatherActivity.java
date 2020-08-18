@@ -15,8 +15,8 @@ import java.util.Objects;
 
 public class ShowWeatherActivity extends AppCompatActivity {
 
-    private TextView humidityNow, overcastNow, selectedCity;
-    private CheckBox humidity, overcast;
+    private TextView pressureNow, windNow,humidityNow, overcastNow, selectedCity;
+    private CheckBox pressure, wind, humidity, overcast;
     private Button aboutCity;
 
     @Override
@@ -33,7 +33,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
         aboutCity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String urlText = "https://wikipedia.org/wiki/" + selectedCity.getText().toString();
+                String urlText = "https://ru.wikipedia.org/wiki/" + selectedCity.getText().toString();
                 Uri uri = Uri.parse(urlText);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
@@ -42,8 +42,14 @@ public class ShowWeatherActivity extends AppCompatActivity {
     }
 
     private void initViews() {
+        pressure = findViewById(R.id.pressure);
+        wind = findViewById(R.id.wind);
         humidity = findViewById(R.id.humidity);
         overcast = findViewById(R.id.overcast);
+        pressureNow = findViewById(R.id.pressureNow);
+        pressureNow.setVisibility(View.INVISIBLE);
+        windNow = findViewById(R.id.windNow);
+        windNow.setVisibility(View.INVISIBLE);
         humidityNow = findViewById(R.id.humidityNow);
         humidityNow.setVisibility(View.INVISIBLE);
         overcastNow = findViewById(R.id.overcastNow);
@@ -53,6 +59,29 @@ public class ShowWeatherActivity extends AppCompatActivity {
     }
 
     private void showWeatherParameters() {
+
+        pressure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(pressure.isChecked()) {
+                    pressureNow.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(), "Show pressure", Toast.LENGTH_SHORT).show();
+                } else {
+                    pressureNow.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        wind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(wind.isChecked()) {
+                    windNow.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(), "Show wind", Toast.LENGTH_SHORT).show();
+                } else {
+                   windNow.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
         humidity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
