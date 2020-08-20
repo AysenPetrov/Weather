@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,7 +12,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     Spinner spinner;
     final static String KEY_TO_CITY = "KEY_TO_CITY";
@@ -22,11 +25,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            Log.d(TAG, "onCreate() Restoring previous state");
+        } else {
+            Log.d(TAG, "onCreate() No saved state available");
+        }
         setContentView(R.layout.activity_main);
         initViews();
         setOnSpinner();
         setOnShowWeatherButton();
     }
+
 
     void setOnSpinner() {
         spinner = findViewById(R.id.spinner);
@@ -57,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void setOnShowWeatherButton() {
         showWeather.setOnClickListener(new View.OnClickListener() {
