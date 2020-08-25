@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Погода</string>
     <string name="city">Москва</string>
-    <string name="time">01:40</string>
-    <string name="date">13 / 08 / 2020</string>
-    <string name="temperature">14°C</string>
+    <string name="time">15:40</string>
+    <string name="date">22 / 08 / 2020</string>
+    <string name="temperature">22°C</string>
     <string name="pressure">Давление</string>
     <string name="pressureNow">1018.3 мбар</string>
     <string name="wind">Ветер</string>
@@ -15,6 +15,7 @@
     <string name="show_weather">показать погоду</string>
     <string name="about_city">О городе</string>
     <string name="wikipedia">https://ru.wikipedia.org/wiki/</string>
+    <string name="textclock">TextClock</string>
 
     <string-array name="cities">
         <item>Москва</item>

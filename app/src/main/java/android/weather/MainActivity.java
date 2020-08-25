@@ -14,6 +14,8 @@ import android.widget.Spinner;
 
 
 public class MainActivity extends AppCompatActivity {
+    private static final String OPEN_WEATHER_MAP_URL = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=439d4b804bc8187953eb36d2a8c26a02";
+    private static final String OPEN_WEATHER_MAP_API = "cbe0774b6175be1f0726850d5b687b01";
     private static final String TAG = MainActivity.class.getSimpleName();
 
     Spinner spinner;

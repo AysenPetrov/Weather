@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="city">Moscow</string>
-    <string name="time">01:40</string>
-    <string name="date">13 / 08 / 2020</string>
-    <string name="temperature">14°C</string>
+    <string name="temperature">22°C</string>
     <string name="pressure">Pressure</string>
     <string name="pressureNow">1018.3 mb</string>
     <string name="wind">Wind</string>

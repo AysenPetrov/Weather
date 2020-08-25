@@ -115,9 +115,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/humidity"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="16dp" />
+        android:text="@string/humidity" />
 
     <CheckBox
         android:id="@+id/overcast"
