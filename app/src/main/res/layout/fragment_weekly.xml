@@ -1,0 +1,50 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="simpleweather.WeeklyFragment"
+    android:id="@+id/weekly_refresh_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextClock
+            android:id="@+id/timeNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:format24Hour=" dd.MMM yyyy
+             k:mm"
+            android:format12Hour="@null"
+            android:textSize="40sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="36sp"
+            android:layout_margin="8dp"
+            android:id="@+id/textCity"
+            android:layout_below="@id/timeNow"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textCity">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/viewWeather" />
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
